@@ -1,0 +1,69 @@
+{
+	"header": {
+		"loginRegister": "Login or register",
+		"logout": "Logout"
+	},
+	"event": {
+		"addToCalendar": "Add to calendar",
+		"loading": "Loading event…",
+		"error": "Could not load the event."
+	},
+	"seating": {
+		"title": "Choose your seats",
+		"subtitle": "Click a seat to add it to your cart.",
+		"stage": "Stage",
+		"legend": {
+			"available": "Available",
+			"selected": "Selected",
+			"unavailable": "Unavailable"
+		},
+		"row": "Row {{row}}",
+		"seat": "Row {{row}}, seat {{place}}",
+		"loading": "Loading seating map…",
+		"error": "Could not load the seating map."
+	},
+	"seat": {
+		"row": "Row",
+		"place": "Seat",
+		"type": "Ticket",
+		"price": "Price",
+		"add": "Add to cart",
+		"remove": "Remove from cart"
+	},
+	"cart": {
+		"empty": "Your cart is empty",
+		"totalForTickets": "Total for {{count}} ticket",
+		"totalForTickets_other": "Total for {{count}} tickets",
+		"checkout": "Checkout now"
+	},
+	"checkout": {
+		"title": "Complete your order",
+		"description": "You have {{count}} ticket in your cart.",
+		"description_other": "You have {{count}} tickets in your cart.",
+		"tabGuest": "Continue as guest",
+		"tabLogin": "Login",
+		"loggedInAs": "You are ordering as",
+		"firstName": "First name",
+		"lastName": "Last name",
+		"email": "Email",
+		"password": "Password",
+		"submit": "Place order",
+		"submitting": "Placing order…",
+		"loginSubmit": "Login & continue",
+		"loginHint": "Demo login: frontend@nfctron.com / Nfctron2025",
+		"summary": "Order summary",
+		"total": "Total"
+	},
+	"validation": {
+		"firstNameRequired": "First name is required",
+		"lastNameRequired": "Last name is required",
+		"emailInvalid": "Please enter a valid email"
+	},
+	"toast": {
+		"orderSuccessTitle": "Order created!",
+		"orderSuccessDescription": "Order #{{orderId}} confirmed. See you at the event!",
+		"orderError": "Something went wrong while creating your order.",
+		"loginError": "Login failed. Check your email and password.",
+		"loginSuccess": "Welcome back, {{name}}!"
+	}
+}
