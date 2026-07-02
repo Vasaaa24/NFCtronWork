@@ -1,3 +1,4 @@
+import { Check, Minus, Plus } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 import { Button } from '@/components/ui/button';
@@ -51,41 +52,58 @@ export function Seat({ seat, seatRow, currencyIso, accent }: SeatProps) {
 					aria-label={t('seating.seat', { row: seatRow, place: seat.place })}
 					aria-pressed={selected}
 					className={cn(
-						'size-7 sm:size-9 lg:size-10 rounded-lg grid place-items-center text-[11px] sm:text-xs lg:text-sm font-semibold transition-all hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-950 focus-visible:ring-offset-1',
+						'size-7 sm:size-9 lg:size-10 rounded-lg grid place-items-center text-[11px] sm:text-xs lg:text-sm font-semibold transition-all hover:scale-105 hover:shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-1',
 						selected
-							? 'bg-zinc-900 text-zinc-50 shadow-md scale-105'
+							? 'bg-brand-600 text-white shadow-md ring-2 ring-brand-600 ring-offset-1'
 							: accent.base,
 					)}
 				>
-					{seat.place}
+					{selected ? (
+						<Check className="size-3.5 lg:size-4 animate-pop" strokeWidth={3} />
+					) : (
+						seat.place
+					)}
 				</button>
 			</PopoverTrigger>
-			<PopoverContent className="w-64">
-				<div className="flex flex-col gap-3">
+			<PopoverContent className="w-64 p-0 overflow-hidden">
+				<div className="flex items-center justify-between gap-2 border-b border-zinc-100 bg-zinc-50/60 px-4 py-3">
 					<div className="flex items-center gap-2">
 						<span className={cn('size-3 rounded-[4px]', accent.dot)} />
-						<span className="font-medium">
+						<span className="font-semibold text-sm">
 							{seat.ticketType?.name ?? t('seat.type')}
 						</span>
 					</div>
+					<span className="text-base font-bold text-zinc-900">
+						{formatCurrency(price, currencyIso, i18n.language)}
+					</span>
+				</div>
 
-					<dl className="grid grid-cols-2 gap-1 text-sm">
+				<div className="flex flex-col gap-3 p-4">
+					<dl className="grid grid-cols-2 gap-y-1.5 text-sm">
 						<dt className="text-zinc-500">{t('seat.row')}</dt>
-						<dd className="text-right">{seatRow}</dd>
+						<dd className="text-right font-medium tabular-nums">{seatRow}</dd>
 						<dt className="text-zinc-500">{t('seat.place')}</dt>
-						<dd className="text-right">{seat.place}</dd>
-						<dt className="text-zinc-500">{t('seat.price')}</dt>
-						<dd className="text-right font-medium">
-							{formatCurrency(price, currencyIso, i18n.language)}
-						</dd>
+						<dd className="text-right font-medium tabular-nums">{seat.place}</dd>
 					</dl>
 
 					{selected ? (
-						<Button variant="destructive" size="sm" onClick={handleToggle}>
+						<Button
+							variant="outline"
+							size="sm"
+							onClick={handleToggle}
+							className="gap-1.5 text-red-600 border-red-200 hover:bg-red-50 hover:text-red-700"
+						>
+							<Minus className="size-4" />
 							{t('seat.remove')}
 						</Button>
 					) : (
-						<Button variant="default" size="sm" onClick={handleToggle}>
+						<Button
+							variant="brand"
+							size="sm"
+							onClick={handleToggle}
+							className="gap-1.5"
+						>
+							<Plus className="size-4" />
 							{t('seat.add')}
 						</Button>
 					)}
