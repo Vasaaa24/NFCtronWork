@@ -5,12 +5,16 @@
 	},
 	"event": {
 		"addToCalendar": "Add to calendar",
+		"showMore": "Show more",
+		"showLess": "Show less",
 		"loading": "Loading event…",
 		"error": "Could not load the event."
 	},
 	"seating": {
 		"title": "Choose your seats",
 		"subtitle": "Click a seat to add it to your cart.",
+		"available": "{{count}} seat available",
+		"available_other": "{{count}} seats available",
 		"stage": "Stage",
 		"legend": {
 			"available": "Available",
@@ -34,7 +38,8 @@
 		"empty": "Your cart is empty",
 		"totalForTickets": "Total for {{count}} ticket",
 		"totalForTickets_other": "Total for {{count}} tickets",
-		"checkout": "Checkout now"
+		"checkout": "Checkout now",
+		"clear": "Clear cart"
 	},
 	"checkout": {
 		"title": "Complete your order",

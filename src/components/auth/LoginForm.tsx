@@ -75,7 +75,7 @@ export function LoginForm({ onSuccess }: LoginFormProps) {
 
 			<p className="text-xs text-zinc-400">{t('checkout.loginHint')}</p>
 
-			<Button type="submit" disabled={isSubmitting}>
+			<Button type="submit" variant="brand" disabled={isSubmitting}>
 				{t('checkout.loginSubmit')}
 			</Button>
 		</form>

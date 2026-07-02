@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	/* violet text selection to match the brand */
+	::selection {
+		background-color: theme("colors.brand.200");
+		color: theme("colors.brand.900");
+	}
+}
+
+@layer utilities {
+	/* thin, unobtrusive scrollbar for the horizontally scrollable seat map */
+	.scrollbar-thin {
+		scrollbar-width: thin;
+		scrollbar-color: theme("colors.zinc.300") transparent;
+	}
+	.scrollbar-thin::-webkit-scrollbar {
+		height: 6px;
+		width: 6px;
+	}
+	.scrollbar-thin::-webkit-scrollbar-thumb {
+		background-color: theme("colors.zinc.300");
+		border-radius: 9999px;
+	}
+	.scrollbar-thin::-webkit-scrollbar-track {
+		background: transparent;
+	}
+}
+
+/* respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}

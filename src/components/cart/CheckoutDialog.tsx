@@ -82,8 +82,18 @@ export function CheckoutDialog({ event }: CheckoutDialogProps) {
 	return (
 		<Dialog open={open} onOpenChange={setOpen}>
 			<DialogTrigger asChild>
-				<Button variant="default" size="lg" disabled={itemCount === 0}>
+				<Button
+					variant="brand"
+					size="lg"
+					disabled={itemCount === 0}
+					className="gap-2 shadow-sm transition-transform active:scale-95"
+				>
 					{t('cart.checkout')}
+					{itemCount > 0 && (
+						<span className="grid min-w-5 h-5 px-1 place-items-center rounded-full bg-white/20 text-xs font-bold tabular-nums">
+							{itemCount}
+						</span>
+					)}
 				</Button>
 			</DialogTrigger>
 
@@ -105,14 +115,15 @@ export function CheckoutDialog({ event }: CheckoutDialogProps) {
 				{isLoggedIn && user ? (
 					// logged in - just confirm and order
 					<div className="flex flex-col gap-4">
-						<div className="rounded-md bg-zinc-50 p-3 text-sm">
-							<p className="text-zinc-500">{t('checkout.loggedInAs')}</p>
-							<p className="font-medium">
+						<div className="rounded-lg bg-brand-50 ring-1 ring-brand-100 p-3 text-sm">
+							<p className="text-brand-700/70">{t('checkout.loggedInAs')}</p>
+							<p className="font-semibold text-zinc-900">
 								{user.firstName} {user.lastName}
 							</p>
 							<p className="text-zinc-500">{user.email}</p>
 						</div>
 						<Button
+							variant="brand"
 							size="lg"
 							disabled={orderMutation.isPending}
 							onClick={() => submitOrder(user)}
@@ -171,11 +182,16 @@ export function CheckoutDialog({ event }: CheckoutDialogProps) {
 										<FieldError>{t('validation.emailInvalid')}</FieldError>
 									)}
 								</div>
-								<Button type="submit" size="lg" disabled={orderMutation.isPending}>
-									{orderMutation.isPending
-										? t('checkout.submitting')
-										: t('checkout.submit')}
-								</Button>
+								<Button
+										type="submit"
+										variant="brand"
+										size="lg"
+										disabled={orderMutation.isPending}
+									>
+										{orderMutation.isPending
+											? t('checkout.submitting')
+											: t('checkout.submit')}
+									</Button>
 							</form>
 						</TabsContent>
 

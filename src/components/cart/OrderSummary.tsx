@@ -15,8 +15,8 @@ export function OrderSummary({ items, total, currencyIso, locale }: OrderSummary
 	const { t } = useTranslation();
 
 	return (
-		<div className="rounded-md border border-zinc-200">
-			<p className="px-3 py-2 text-xs font-medium uppercase tracking-wide text-zinc-500">
+		<div className="rounded-xl border border-zinc-200/70 overflow-hidden">
+			<p className="px-3 py-2 text-[11px] font-semibold uppercase tracking-widest text-zinc-400">
 				{t('checkout.summary')}
 			</p>
 			<ul className="divide-y divide-zinc-100 max-h-40 overflow-y-auto">
@@ -35,9 +35,11 @@ export function OrderSummary({ items, total, currencyIso, locale }: OrderSummary
 					</li>
 				))}
 			</ul>
-			<div className="flex items-center justify-between border-t border-zinc-200 px-3 py-2 font-semibold">
+			<div className="flex items-center justify-between border-t border-zinc-200/70 bg-zinc-50/70 px-3 py-2.5 font-semibold">
 				<span>{t('checkout.total')}</span>
-				<span>{formatCurrency(total, currencyIso, locale)}</span>
+				<span className="tabular-nums">
+					{formatCurrency(total, currencyIso, locale)}
+				</span>
 			</div>
 		</div>
 	);

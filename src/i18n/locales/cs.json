@@ -5,12 +5,17 @@
 	},
 	"event": {
 		"addToCalendar": "Přidat do kalendáře",
+		"showMore": "Zobrazit více",
+		"showLess": "Zobrazit méně",
 		"loading": "Načítám akci…",
 		"error": "Akci se nepodařilo načíst."
 	},
 	"seating": {
 		"title": "Vyberte si místa",
 		"subtitle": "Klikněte na sedadlo a přidejte ho do košíku.",
+		"available": "{{count}} volné místo",
+		"available_few": "{{count}} volná místa",
+		"available_other": "{{count}} volných míst",
 		"stage": "Pódium",
 		"legend": {
 			"available": "Volné",
@@ -35,7 +40,8 @@
 		"totalForTickets": "Celkem za {{count}} vstupenku",
 		"totalForTickets_few": "Celkem za {{count}} vstupenky",
 		"totalForTickets_other": "Celkem za {{count}} vstupenek",
-		"checkout": "Koupit vstupenky"
+		"checkout": "Koupit vstupenky",
+		"clear": "Vyprázdnit košík"
 	},
 	"checkout": {
 		"title": "Dokončení objednávky",
