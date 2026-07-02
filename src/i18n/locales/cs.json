@@ -1,0 +1,77 @@
+{
+	"header": {
+		"loginRegister": "Přihlásit se",
+		"logout": "Odhlásit se"
+	},
+	"event": {
+		"addToCalendar": "Přidat do kalendáře",
+		"showMore": "Zobrazit více",
+		"showLess": "Zobrazit méně",
+		"loading": "Načítám akci…",
+		"error": "Akci se nepodařilo načíst."
+	},
+	"seating": {
+		"title": "Vyberte si místa",
+		"subtitle": "Klikněte na sedadlo a přidejte ho do košíku.",
+		"available": "{{count}} volné místo",
+		"available_few": "{{count}} volná místa",
+		"available_other": "{{count}} volných míst",
+		"stage": "Pódium",
+		"legend": {
+			"available": "Volné",
+			"selected": "Vybrané",
+			"unavailable": "Obsazené"
+		},
+		"row": "Řada {{row}}",
+		"seat": "Řada {{row}}, místo {{place}}",
+		"loading": "Načítám mapu sedadel…",
+		"error": "Mapu sedadel se nepodařilo načíst."
+	},
+	"seat": {
+		"row": "Řada",
+		"place": "Místo",
+		"type": "Vstupenka",
+		"price": "Cena",
+		"add": "Přidat do košíku",
+		"remove": "Odebrat z košíku"
+	},
+	"cart": {
+		"empty": "Váš košík je prázdný",
+		"totalForTickets": "Celkem za {{count}} vstupenku",
+		"totalForTickets_few": "Celkem za {{count}} vstupenky",
+		"totalForTickets_other": "Celkem za {{count}} vstupenek",
+		"checkout": "Koupit vstupenky",
+		"clear": "Vyprázdnit košík"
+	},
+	"checkout": {
+		"title": "Dokončení objednávky",
+		"description": "V košíku máte {{count}} vstupenku.",
+		"description_few": "V košíku máte {{count}} vstupenky.",
+		"description_other": "V košíku máte {{count}} vstupenek.",
+		"tabGuest": "Pokračovat jako host",
+		"tabLogin": "Přihlášení",
+		"loggedInAs": "Objednáváte jako",
+		"firstName": "Jméno",
+		"lastName": "Příjmení",
+		"email": "E-mail",
+		"password": "Heslo",
+		"submit": "Odeslat objednávku",
+		"submitting": "Odesílám objednávku…",
+		"loginSubmit": "Přihlásit a pokračovat",
+		"loginHint": "Demo přihlášení: frontend@nfctron.com / Nfctron2025",
+		"summary": "Souhrn objednávky",
+		"total": "Celkem"
+	},
+	"validation": {
+		"firstNameRequired": "Zadejte jméno",
+		"lastNameRequired": "Zadejte příjmení",
+		"emailInvalid": "Zadejte platný e-mail"
+	},
+	"toast": {
+		"orderSuccessTitle": "Objednávka vytvořena!",
+		"orderSuccessDescription": "Objednávka #{{orderId}} potvrzena. Uvidíme se na akci!",
+		"orderError": "Při vytváření objednávky došlo k chybě.",
+		"loginError": "Přihlášení se nezdařilo. Zkontrolujte e-mail a heslo.",
+		"loginSuccess": "Vítejte zpět, {{name}}!"
+	}
+}
