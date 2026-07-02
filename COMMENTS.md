@@ -3,6 +3,8 @@
 Pár poznámek k tomu, jak jsem case study řešil a proč jsem se u některých věcí
 rozhodl tak, jak jsem se rozhodl.
 
+**Nasazená aplikace:** https://nfctron-case-study.vercel.app/
+
 ## Co je hotové
 
 Všechny funkční požadavky:
